@@ -19,7 +19,7 @@ const props = defineProps({
     <div class="card-header p-3">
       <div class="d-flex flex-row">
         <h2 class="fs-4 flex-fill text-capitalize">
-          <span class="me-2">({{ codeIndex }})</span> {{ snippetData.title }}
+          <span class="me-2">{{ codeIndex }}.</span> {{ snippetData.title }}
         </h2>
         <div v-if="snippetData?.tags">
           <TextBadge v-for="tag in snippetData.tags" :key="tag">{{ tag }}</TextBadge>
