@@ -1,6 +1,16 @@
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
 export const jscodesnippets = ref([
+  {
+    title: 'test with functions',
+    code: `function updateBrand(obj) {
+      // Mutating the object is visible outside the function
+      obj.brand = "Toyota";
+      // Try to reassign the parameter, but this won't affect
+      // the variable's value outside the function
+      obj = null;
+    }`
+  },
   {
     title: 'how to capitalize text',
     code: 'const capitalize = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;',
@@ -18,7 +28,8 @@ export const jscodesnippets = ref([
   {
     title: 'remove duplicates from array',
     code: 'const removeDuplicates = (arr) => [...new Set(arr)];',
-    description: 'Removing duplicate values in an array is an essential task in JavaScript. For example, you might be adding one user to another user\'s friends list, but you don\'t want that user to be added or displayed twice. This removeDuplicates function leverages the Set constructor in JavaScript, which removes any duplicate (primitive) values by default. After that, we use the spread operator ... to spread its values into a new array.',
+    description:
+      "Removing duplicate values in an array is an essential task in JavaScript. For example, you might be adding one user to another user's friends list, but you don't want that user to be added or displayed twice. This removeDuplicates function leverages the Set constructor in JavaScript, which removes any duplicate (primitive) values by default. After that, we use the spread operator ... to spread its values into a new array.",
     tags: ['array']
   }
 ])
