@@ -5,6 +5,7 @@
 <style lang="scss" scoped>
 $color: $primary;
 .text-badge {
+  margin-left: 16px;
   background-color: $color;
   cursor: pointer;
   &:hover {

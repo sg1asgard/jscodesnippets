@@ -1,8 +1,8 @@
 <script setup></script>
 <template>
-  <header>
-    <h1>js code snippets</h1>
-    <p>cool...</p>
+  <header class="mb-5">
+    <h1>JavaScript CookBook Snippets</h1>
+    <p class="fs-3">code snippets that are make your life easy</p>
   </header>
 </template>
 
