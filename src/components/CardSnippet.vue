@@ -1,6 +1,21 @@
 <script setup>
 import { ref } from 'vue'
 import TextBadge from '@/components/shared/TextBadge.vue'
+import MarkdownIt from 'markdown-it'
+import Markdown from 'vue3-markdown-it'
+import MarkdownItHighlightjs from 'markdown-it-highlightjs'
+import MarkdownItMark from 'markdown-it-mark'
+import 'highlight.js/styles/github-dark-dimmed.css'
+
+const md = new MarkdownIt({ html: true, xhtmlOut: true })
+  .use(MarkdownItHighlightjs)
+  .use(MarkdownItMark)
+
+const plugins = [
+  {
+    plugin: MarkdownItHighlightjs
+  }
+]
 
 const props = defineProps({
   snippetData: {

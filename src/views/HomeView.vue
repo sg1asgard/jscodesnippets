@@ -3,6 +3,7 @@ import { ref, reactive, onMounted } from 'vue'
 import { jscodesnippets } from '@/composables/jscodesnippets'
 import AppHeader from '@/components/AppHeader.vue'
 import CardSnippet from '@/components/CardSnippet.vue'
+import sourceData from '@/data/data.json'
 </script>
 
 <template>
@@ -20,7 +21,7 @@ import CardSnippet from '@/components/CardSnippet.vue'
     </div>
 
     <main>
-      <CardSnippet v-for="(item, index) in jscodesnippets" :key="index" :snippetData="item" :codeIndex="index" />
+      <CardSnippet v-for="(item, index) in sourceData" :key="index" :snippetData="item" :codeIndex="index" />
     </main>
   </div>
 </template>
